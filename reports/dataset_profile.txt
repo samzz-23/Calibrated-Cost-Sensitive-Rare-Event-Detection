@@ -1,0 +1,210 @@
+Petrobras 3W Dataset Profile
+==============================
+
+Dataset overview
+----------------
+Dataset version: 2.0.0
+Parquet files (instances): 2228
+Observations (rows): 76587318
+Columns excluding timestamp index: 29
+Expected structure confirmed: 27 sensor/operational variables + class + state
+Timestamp stored as DataFrame index: yes
+
+Instance counts
+---------------
+0: Normal Operation | 594 files (26.6607% of instances)
+1: Abrupt Increase of BSW | 128 files (5.7451% of instances)
+2: Spurious Closure of DHSV | 38 files (1.7056% of instances)
+3: Severe Slugging | 106 files (4.7576% of instances)
+4: Flow Instability | 343 files (15.3950% of instances)
+5: Rapid Productivity Loss | 450 files (20.1975% of instances)
+6: Quick Restriction in PCK | 221 files (9.9192% of instances)
+7: Scaling in PCK | 46 files (2.0646% of instances)
+8: Hydrate in Production Line | 95 files (4.2639% of instances)
+9: Hydrate in Service Line | 207 files (9.2908% of instances)
+
+Observation counts
+------------------
+0: Normal Operation | 12158183 rows (15.8749% of observations)
+1: Abrupt Increase of BSW | 9107107 rows (11.8911% of observations)
+2: Spurious Closure of DHSV | 737785 rows (0.9633% of observations)
+3: Severe Slugging | 4949279 rows (6.4623% of observations)
+4: Flow Instability | 3689683 rows (4.8176% of observations)
+5: Rapid Productivity Loss | 13301677 rows (17.3680% of observations)
+6: Quick Restriction in PCK | 5882267 rows (7.6805% of observations)
+7: Scaling in PCK | 10284155 rows (13.4280% of observations)
+8: Hydrate in Production Line | 6995955 rows (9.1346% of observations)
+9: Hydrate in Service Line | 9481227 rows (12.3796% of observations)
+
+Instance size (rows per Parquet file)
+-------------------------------------
+min=5215.000, p01=10588.830, p25=21342.750, median=26999.000, mean=34374.918, p75=29299.000, p99=288924.420, max=768314.000
+
+Instance duration (seconds)
+---------------------------
+min=5214.000, p01=10587.830, p25=21341.750, median=26998.000, mean=34373.918, p75=29298.000, p99=288923.420, max=768313.000
+
+Missing sensor observations
+---------------------------
+ABER-CKGL: 68095805 (88.9126%)
+ABER-CKP: 64260860 (83.9054%)
+ESTADO-DHSV: 62721921 (81.8960%)
+ESTADO-M1: 58814113 (76.7935%)
+ESTADO-M2: 58899036 (76.9044%)
+ESTADO-PXO: 58411115 (76.2673%)
+ESTADO-SDV-GL: 59482047 (77.6657%)
+ESTADO-SDV-P: 52271211 (68.2505%)
+ESTADO-W1: 57649282 (75.2726%)
+ESTADO-W2: 58293856 (76.1142%)
+ESTADO-XO: 58048588 (75.7940%)
+P-ANULAR: 51126803 (66.7562%)
+P-JUS-BS: 76587318 (100.0000%)
+P-JUS-CKGL: 44691084 (58.3531%)
+P-JUS-CKP: 54471358 (71.1232%)
+P-MON-CKGL: 76278592 (99.5969%)
+P-MON-CKP: 7079851 (9.2442%)
+P-MON-SDV-P: 76587318 (100.0000%)
+P-PDG: 7916216 (10.3362%)
+PT-P: 76587318 (100.0000%)
+P-TPT: 5381783 (7.0270%)
+QBS: 76587318 (100.0000%)
+QGL: 52021358 (67.9242%)
+T-JUS-CKP: 16032900 (20.9341%)
+T-MON-CKP: 52969713 (69.1625%)
+T-PDG: 55776046 (72.8267%)
+T-TPT: 10262040 (13.3991%)
+
+Schema consistency
+------------------
+Schemas consistent: True
+Expected columns: ['ABER-CKGL', 'ABER-CKP', 'ESTADO-DHSV', 'ESTADO-M1', 'ESTADO-M2', 'ESTADO-PXO', 'ESTADO-SDV-GL', 'ESTADO-SDV-P', 'ESTADO-W1', 'ESTADO-W2', 'ESTADO-XO', 'P-ANULAR', 'P-JUS-BS', 'P-JUS-CKGL', 'P-JUS-CKP', 'P-MON-CKGL', 'P-MON-CKP', 'P-MON-SDV-P', 'P-PDG', 'PT-P', 'P-TPT', 'QBS', 'QGL', 'T-JUS-CKP', 'T-MON-CKP', 'T-PDG', 'T-TPT', 'class', 'state']
+
+Source/well information
+-----------------------
+Unique source/well identifiers: 42
+Identifiers used by multiple instances: 32
+DRAWN: 20 instances; examples=['data\\raw\\3W\\dataset\\1\\DRAWN_00001.parquet', 'data\\raw\\3W\\dataset\\1\\DRAWN_00002.parquet', 'data\\raw\\3W\\dataset\\1\\DRAWN_00003.parquet']
+SIMULATED: 1089 instances; examples=['data\\raw\\3W\\dataset\\1\\SIMULATED_00001.parquet', 'data\\raw\\3W\\dataset\\1\\SIMULATED_00002.parquet', 'data\\raw\\3W\\dataset\\1\\SIMULATED_00003.parquet']
+WELL-00001: 132 instances; examples=['data\\raw\\3W\\dataset\\0\\WELL-00001_20170201010207.parquet', 'data\\raw\\3W\\dataset\\0\\WELL-00001_20170201060114.parquet', 'data\\raw\\3W\\dataset\\0\\WELL-00001_20170201110124.parquet']
+WELL-00002: 326 instances; examples=['data\\raw\\3W\\dataset\\0\\WELL-00002_20131211220015.parquet', 'data\\raw\\3W\\dataset\\0\\WELL-00002_20131212000148.parquet', 'data\\raw\\3W\\dataset\\0\\WELL-00002_20131212020000.parquet']
+WELL-00003: 29 instances; examples=['data\\raw\\3W\\dataset\\0\\WELL-00003_20170514000000.parquet', 'data\\raw\\3W\\dataset\\0\\WELL-00003_20170514050000.parquet', 'data\\raw\\3W\\dataset\\0\\WELL-00003_20170514100000.parquet']
+WELL-00004: 58 instances; examples=['data\\raw\\3W\\dataset\\0\\WELL-00004_20140806210033.parquet', 'data\\raw\\3W\\dataset\\0\\WELL-00004_20140806230129.parquet', 'data\\raw\\3W\\dataset\\0\\WELL-00004_20140807010107.parquet']
+WELL-00005: 119 instances; examples=['data\\raw\\3W\\dataset\\0\\WELL-00005_20170331050014.parquet', 'data\\raw\\3W\\dataset\\0\\WELL-00005_20170331100000.parquet', 'data\\raw\\3W\\dataset\\0\\WELL-00005_20170331150000.parquet']
+WELL-00006: 117 instances; examples=['data\\raw\\3W\\dataset\\0\\WELL-00006_20170206210031.parquet', 'data\\raw\\3W\\dataset\\0\\WELL-00006_20170207020135.parquet', 'data\\raw\\3W\\dataset\\0\\WELL-00006_20170207070124.parquet']
+WELL-00007: 12 instances; examples=['data\\raw\\3W\\dataset\\0\\WELL-00007_20170801170000.parquet', 'data\\raw\\3W\\dataset\\0\\WELL-00007_20170801190000.parquet', 'data\\raw\\3W\\dataset\\4\\WELL-00007_20170517200012.parquet']
+WELL-00008: 57 instances; examples=['data\\raw\\3W\\dataset\\0\\WELL-00008_20170610210246.parquet', 'data\\raw\\3W\\dataset\\0\\WELL-00008_20170611020246.parquet', 'data\\raw\\3W\\dataset\\0\\WELL-00008_20170611070445.parquet']
+WELL-00010: 89 instances; examples=['data\\raw\\3W\\dataset\\2\\WELL-00010_20171218180131.parquet', 'data\\raw\\3W\\dataset\\4\\WELL-00010_20180416070150.parquet', 'data\\raw\\3W\\dataset\\4\\WELL-00010_20180416090133.parquet']
+WELL-00011: 13 instances; examples=['data\\raw\\3W\\dataset\\2\\WELL-00011_20140515083000.parquet', 'data\\raw\\3W\\dataset\\2\\WELL-00011_20140530083203.parquet', 'data\\raw\\3W\\dataset\\2\\WELL-00011_20140606213810.parquet']
+WELL-00012: 2 instances; examples=['data\\raw\\3W\\dataset\\2\\WELL-00012_20170320011000.parquet', 'data\\raw\\3W\\dataset\\2\\WELL-00012_20170320123144.parquet']
+WELL-00014: 55 instances; examples=['data\\raw\\3W\\dataset\\3\\WELL-00014_20170917140000.parquet', 'data\\raw\\3W\\dataset\\3\\WELL-00014_20170917190000.parquet', 'data\\raw\\3W\\dataset\\3\\WELL-00014_20170918010114.parquet']
+WELL-00015: 2 instances; examples=['data\\raw\\3W\\dataset\\5\\WELL-00015_20170620122925.parquet', 'data\\raw\\3W\\dataset\\9\\WELL-00015_20190922060029.parquet']
+WELL-00016: 7 instances; examples=['data\\raw\\3W\\dataset\\5\\WELL-00016_20180405005319.parquet', 'data\\raw\\3W\\dataset\\5\\WELL-00016_20180426131710.parquet', 'data\\raw\\3W\\dataset\\5\\WELL-00016_20180426135108.parquet']
+WELL-00019: 5 instances; examples=['data\\raw\\3W\\dataset\\0\\WELL-00019_20170307235203.parquet', 'data\\raw\\3W\\dataset\\8\\WELL-00019_20120601165020.parquet', 'data\\raw\\3W\\dataset\\8\\WELL-00019_20141117190526.parquet']
+WELL-00020: 7 instances; examples=['data\\raw\\3W\\dataset\\5\\WELL-00020_20140314144539.parquet', 'data\\raw\\3W\\dataset\\5\\WELL-00020_20140317130658.parquet', 'data\\raw\\3W\\dataset\\5\\WELL-00020_20140318005900.parquet']
+WELL-00021: 2 instances; examples=['data\\raw\\3W\\dataset\\7\\WELL-00021_20180611011218.parquet', 'data\\raw\\3W\\dataset\\7\\WELL-00021_20190403013307.parquet']
+WELL-00022: 8 instances; examples=['data\\raw\\3W\\dataset\\7\\WELL-00022_20180802233838.parquet', 'data\\raw\\3W\\dataset\\7\\WELL-00022_20180912025800.parquet', 'data\\raw\\3W\\dataset\\7\\WELL-00022_20180919003240.parquet']
+
+Representative class, state, and temporal behavior
+--------------------------------------------------
+Class 0 (Normal Operation): data\raw\3W\dataset\0\WELL-00001_20170201010207.parquet
+  class unique/frequencies: np.int16(0)=17874, <NA>=3600
+  class changes within instance: True
+  state unique/frequencies: np.int16(0)=17874, <NA>=3600
+  state changes within instance: True
+  timestamps monotonically increasing: True
+  median step seconds: 1.0
+  approximately one second apart: True
+Class 1 (Abrupt Increase of BSW): data\raw\3W\dataset\1\DRAWN_00001.parquet
+  class unique/frequencies: np.int16(101)=148616, np.int16(0)=13779, np.int16(1)=10405
+  class changes within instance: True
+  state unique/frequencies: np.int16(0)=172800
+  state changes within instance: False
+  timestamps monotonically increasing: True
+  median step seconds: 1.0
+  approximately one second apart: True
+  event-phase evidence: before=True, event=True, after=False; measured from class labels
+Class 2 (Spurious Closure of DHSV): data\raw\3W\dataset\2\SIMULATED_00001.parquet
+  class unique/frequencies: np.int16(2)=21599, np.int16(0)=3600, np.int16(102)=3600
+  class changes within instance: True
+  state unique/frequencies: np.int16(0)=28799
+  state changes within instance: False
+  timestamps monotonically increasing: True
+  median step seconds: 1.0
+  approximately one second apart: True
+  event-phase evidence: before=True, event=True, after=False; measured from class labels
+Class 3 (Severe Slugging): data\raw\3W\dataset\3\SIMULATED_00001.parquet
+  class unique/frequencies: np.int16(3)=51999
+  class changes within instance: False
+  state unique/frequencies: np.int16(0)=51999
+  state changes within instance: False
+  timestamps monotonically increasing: True
+  median step seconds: 1.0
+  approximately one second apart: True
+  event-phase evidence: before=False, event=True, after=False; measured from class labels
+Class 4 (Flow Instability): data\raw\3W\dataset\4\WELL-00001_20170316110203.parquet
+  class unique/frequencies: np.int16(4)=7078, <NA>=3600
+  class changes within instance: True
+  state unique/frequencies: np.int16(0)=7078, <NA>=3600
+  state changes within instance: True
+  timestamps monotonically increasing: True
+  median step seconds: 1.0
+  approximately one second apart: True
+  event-phase evidence: before=True, event=True, after=False; measured from class labels
+Class 5 (Rapid Productivity Loss): data\raw\3W\dataset\5\SIMULATED_00001.parquet
+  class unique/frequencies: np.int16(5)=21999, np.int16(105)=6800, np.int16(0)=500
+  class changes within instance: True
+  state unique/frequencies: np.int16(0)=29299
+  state changes within instance: False
+  timestamps monotonically increasing: True
+  median step seconds: 1.0
+  approximately one second apart: True
+  event-phase evidence: before=True, event=True, after=False; measured from class labels
+Class 6 (Quick Restriction in PCK): data\raw\3W\dataset\6\SIMULATED_00001.parquet
+  class unique/frequencies: np.int16(6)=17999, np.int16(106)=7200, np.int16(0)=1800
+  class changes within instance: True
+  state unique/frequencies: np.int16(0)=26999
+  state changes within instance: False
+  timestamps monotonically increasing: True
+  median step seconds: 1.0
+  approximately one second apart: True
+  event-phase evidence: before=True, event=True, after=False; measured from class labels
+Class 7 (Scaling in PCK): data\raw\3W\dataset\7\DRAWN_00001.parquet
+  class unique/frequencies: np.int16(107)=304263, np.int16(0)=41338
+  class changes within instance: True
+  state unique/frequencies: np.int16(0)=345601
+  state changes within instance: False
+  timestamps monotonically increasing: True
+  median step seconds: 1.0
+  approximately one second apart: True
+  event-phase evidence: before=False, event=False, after=False; measured from class labels
+Class 8 (Hydrate in Production Line): data\raw\3W\dataset\8\SIMULATED_00001.parquet
+  class unique/frequencies: np.int16(8)=15999, np.int16(108)=9200, np.int16(0)=1800
+  class changes within instance: True
+  state unique/frequencies: np.int16(0)=26999
+  state changes within instance: False
+  timestamps monotonically increasing: True
+  median step seconds: 1.0
+  approximately one second apart: True
+  event-phase evidence: before=True, event=True, after=False; measured from class labels
+Class 9 (Hydrate in Service Line): data\raw\3W\dataset\9\SIMULATED_00001.parquet
+  class unique/frequencies: np.int16(9)=21239, np.int16(0)=6000, np.int16(109)=3960
+  class changes within instance: True
+  state unique/frequencies: np.int16(0)=31199
+  state changes within instance: False
+  timestamps monotonically increasing: True
+  median step seconds: 1.0
+  approximately one second apart: True
+  event-phase evidence: before=True, event=True, after=False; measured from class labels
+
+Label / event phase information
+-------------------------------
+The representative section reports measured before/event/after evidence; no phase boundaries were invented.
+
+Potential modeling implications (interpretation of measured results)
+--------------------------------------------------------------------
+- Use instance and observation percentages above when assessing class imbalance.
+- Missingness varies by sensor according to the table and may need explicit handling.
+- Timestamp ordering and one-second spacing indicate temporal dependence should be respected.
+- Repeated source/well identifiers support grouped train/test splitting to reduce source leakage.
+- Label transitions should be inspected before definingu an early-warning target; this profile does not choose one.
+- No cost values, preprocessing, feature engineering, or models were used.
